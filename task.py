@@ -18,3 +18,19 @@
 #Your program must be runnable with command "python task.py".
 #Show some usecases of your library in the code (print some things)
 #Good Luck
+
+from bank import bankc
+
+choose = input("1.Create a bank;\n2.Choose a bank;\n")
+
+if choose == "1":
+	print("Creating a bank")
+	bank_name = input("Bank name: ")
+	new_bank = bankc(bank_name)
+	mission = input("What next?\n 1.Add client\n2.List of clients\n3.Add money to client\n4.Transfer")
+	if mission == 1:
+		new_bank.addClient("Somebody","12345",60)
+	if mission == 2:
+		new_bank.listOfClient()	
+
+
