@@ -131,7 +131,8 @@ if __name__=="__main__":
 		elif option == "2":
 			showAllBanks()
 			choosen_bank = input("Choose a bank( Write the bank name): ").lower()
-			bankMenu(choosen_bank)
+			if choosen_bank in allBanks:
+				bankMenu(choosen_bank)
 		elif option == "3":
 			saveToFile("Banks.txt")
 		elif option == "4":
